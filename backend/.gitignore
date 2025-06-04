@@ -1,0 +1,3 @@
+#gitignore helps to avoid these secret files to push on github
+.env 
+node_modules
