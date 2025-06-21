@@ -18,7 +18,19 @@ export default function Signup() {
     let {userData,setUserData}=useContext(userDataContext);
     let {loading,setLoading}=useContext(authDataContext);
 
+    const validateEmail = (email) => {
+        const regex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+        return regex.test(email);
+      };
+
+
+
     const handleSignUP=async(e)=>{
+      e.preventDefault();
+  if (!validateEmail(email)) {
+    toast.error("Please enter a valid email address");
+    return;
+  }
       setLoading(true);
         try{
             e.preventDefault();
@@ -36,7 +48,7 @@ export default function Signup() {
         catch(error){
           setLoading(false);
           console.log(error);
-          toast.error("Something went wrong");
+          toast.error("Email already exists");
         }
     }
     

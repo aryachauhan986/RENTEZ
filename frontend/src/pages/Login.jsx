@@ -17,7 +17,17 @@ export default function Login() {
     let [password,setPassword]=useState("");
     let {loading,setLoading}=useContext(authDataContext);
    
+     const validateEmail = (email) => {
+        const regex = /^[a-zA-Z0-9._%+-]+@gmail\.com$/;
+        return regex.test(email);
+      };
+
     const handleLogin=async(e)=>{
+         e.preventDefault();
+           if (!validateEmail(email)) {
+             toast.error("Please enter a valid email address");
+             return;
+           }
            setLoading(true);
             try{
                 e.preventDefault();
