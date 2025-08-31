@@ -17,8 +17,8 @@ export const signUp=async(req,res)=>{
             //store token into cookie
             res.cookie("token",token,{
                 httpOnly:true,      //because our server is local server when we deploy it use httpsOnly
-                secure:process.env.NODE_ENVIRONMENT ==="production",
-                sameSite:"strict", //cookie data will sent through request if request is from same site/website
+                secure:true,
+                sameSite:"none", //cookie data will sent through request if request is from same site/website
                 maxAge: 7*24*60*60*1000
             })
 
@@ -50,8 +50,8 @@ export const login=async(req,res)=>{
             //store token into cookie
             res.cookie("token",token,{
                 httpOnly:true,      //because our server is local server when we deploy it use httpsOnly
-                secure:process.env.NODE_ENVIRONMENT ==="production",
-                sameSite:"strict",
+                secure:true,
+                sameSite:"none",
                 maxAge: 7*24*60*60*1000
             })
             // console.log(token);
