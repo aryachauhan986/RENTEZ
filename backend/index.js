@@ -15,7 +15,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(cors({
-    origin:"http://localhost:5173",   //to allow the request from this localhost too
+    origin:"https://rentez-frontend.onrender.com",   //to allow the request from this localhost too
     credentials:true
 }))
 
