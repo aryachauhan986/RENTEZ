@@ -27,6 +27,7 @@ export default function Card({title,landmark,image1,image2,image3,rent,city,id,r
     <div className='w-[330px] max-w-[85%] h-[460px] flex items-start justify-start flex-col rounded-lg cursor-pointer relative z-[10]' onClick={()=>!isBooked?handleClick():null}>
         
       {isBooked &&   <div className='text-[green] bg-[white] rounded-lg absolute flex items-center justify-center right-1 top-1 gap-[5px] p-[5px]'><GiConfirmed className='w-[20px] h-[20p] text-[green]'/>Booked</div>}
+      {isBooked && host!=userData?._id && <div className='text-[red] bg-[white] rounded-lg absolute flex items-center justify-center right-1 top-[50px] gap-[5px] p-[5px]' onClick={()=>{setPopUp(prev=>!prev)}}><FcCancel className='w-[20px] h-[20p]'/>Cancel Booking</div>}
       {isBooked && host==userData?._id && <div className='text-[red] bg-[white] rounded-lg absolute flex items-center justify-center right-1 top-[50px] gap-[5px] p-[5px]' onClick={()=>{setPopUp(prev=>!prev)}}><FcCancel className='w-[20px] h-[20p]'/>Cancel Booking</div>}
 
        {popUp && <div className='w-[300px] h-[100px] bg-[#ffffffdf] absolute top-[110px] left-[13px] rounded-lg'>
