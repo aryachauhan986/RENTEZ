@@ -7,6 +7,7 @@ import cors from "cors";
 import userRouter from "./routes/user.route.js";
 import listingRouter from "./routes/listing.route.js";
 import bookingRouter from "./routes/booking.route.js";
+import "./bookingcleaner.js"
 
 dotenv.config(); //loads environment variables from .env file into process.env to provide security
 
