@@ -30,6 +30,7 @@ export const createBooking=async(req,res)=>{
         checkIn,
         checkOut,
         totalRent,
+        expireAt:checkOut,
         host:listing.host,
         guest:req.userId,
         listing:listing._id

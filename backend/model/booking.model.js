@@ -32,8 +32,14 @@ const bookingSchema=new mongoose.Schema({
    totalRent:{
     type:Number,
     required:true
-   }
+   },
+   expireAt: {  // 👈 TTL cleanup
+    type: Date,
+    required: true
+  }
 },{timestamps:true});
+
+bookingSchema.index({ expireAt: 1 }, { expireAfterSeconds: 0 }); //to expire after checkout
 
 const Booking=mongoose.model("Booking",bookingSchema);
 
