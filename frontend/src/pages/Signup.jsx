@@ -60,7 +60,7 @@ export default function Signup() {
          }}><FaArrowLeftLong className='w-[25px] h-[25px] text-[white]'/></div>
 
          <form action ="" onSubmit={handleSignUP} className='max-w-[900px] w-[90%] h-[600px] flex items-center justify-center  flex-col md:items-start gap-[10px]'>
-           <h1 className='text-[30px] text-[black]'>Welcome to AirBnb</h1>
+           <h1 className='text-[30px] text-[black]'>Welcome to RENTEZ</h1>
 
             <div className='w-[90%] flex items-start justify-start flex-col gap-[10px] mt-[30px]'>
             <label htmlFor="name" className='text-[20px]'>UserName</label>

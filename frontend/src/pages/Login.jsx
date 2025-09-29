@@ -57,7 +57,7 @@ export default function Login() {
                       }}><FaArrowLeftLong className='w-[25px] h-[25px] text-[white]'/></div>
 
              <form action ="" className='max-w-[900px] w-[90%] h-[600px] flex items-center justify-center  flex-col md:items-start gap-[10px]' onSubmit={handleLogin}>
-               <h1 className='text-[30px] text-[black]'>Welcome to AirBnb</h1>
+               <h1 className='text-[30px] text-[black]'>Welcome to RENTEZ</h1>
     
                 <div className='w-[90%] flex items-start justify-start flex-col gap-[10px]'>
                 <label htmlFor="email" className='text-[20px]'>Email</label>
