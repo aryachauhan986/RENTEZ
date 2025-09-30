@@ -10,7 +10,7 @@ import { userDataContext } from './Context/UserContext.jsx'
 import MyListing from './pages/MyListing.jsx'
 import ViewCard from './pages/ViewCard.jsx'
 import MyBooking from './pages/MyBooking.jsx'
-import Booked from './pages/booked.jsx'
+import Booked from './pages/Booked.jsx'
 import {ToastContainer,toast} from 'react-toastify';//used for message popup
 
 export default function App() {
